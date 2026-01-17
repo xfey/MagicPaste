@@ -4,7 +4,7 @@ MagicPaste 是一款 **意图感知** 剪贴板工具：在粘贴时，它会结
 
 <div align="center">
 
-[English README](README.md)|[主页](https://xfey.github.io/MagicPaste)｜[本地开发](DEVELOPMENT.md)｜[开源协议](LICENSE)
+[English README](README.md)｜[主页](https://xfey.github.io/MagicPaste)｜[本地开发](DEVELOPMENT.md)｜[开源协议](LICENSE)
 
 <img src="docs/assets/magicpaste_cn_readme.png" alt="MagicPaste illustration" width="720" />
 
