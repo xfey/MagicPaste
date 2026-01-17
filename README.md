@@ -4,7 +4,7 @@ MagicPaste is an **intent-aware** clipboard tool. When you paste, it infers the 
 
 <div align="center">
 
-[中文](README_CN.md)｜[Development](DEVELOPMENT.md)｜[License](LICENSE)
+[中文](README_CN.md) | [Homepage](https://xfey.github.io/MagicPaste)｜[Development](DEVELOPMENT.md)｜[License](LICENSE)
 
 <img src="docs/assets/magicpaste_readme.png" alt="MagicPaste illustration" width="720" />
 
