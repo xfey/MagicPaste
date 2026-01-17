@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tray Hint</title>
+    <link rel="stylesheet" href="./tray_hint.css" />
+  </head>
+  <body>
+    <div class="tray-hint" id="tray-hint"></div>
+    <script>
+      const params = new URLSearchParams(window.location.search || "");
+      const text = params.get("text") || "";
+      const hint = document.getElementById("tray-hint");
+      hint.textContent = text;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magic Paste</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="guide-page" class="guide-page">
+      <button id="guide-close" class="guide-close" type="button" aria-label="Close">×</button>
+      <label class="guide-locale">
+        <span data-i18n="guide.localeLabel">Language</span>
+        <select id="guide-locale-select" name="guide-locale" aria-label="Language">
+          <option value="en-US">English</option>
+          <option value="zh-CN">简体中文</option>
+        </select>
+      </label>
+      <div class="guide-content">
+        <div id="guide-hotkey" class="guide-hotkey"></div>
+        <div id="guide-setup-hint" class="guide-setup-hint"></div>
+        <div class="guide-stack">
+          <div class="guide-window-slot">
+          <div id="overlay-shell" class="terminal-card">
+            <div id="loading-card" class="loading-card hidden">
+              <div class="loading-text">
+                <span id="loading-text-label" data-i18n="overlay.loading">Casting clipboard magic</span><span id="loading-dots">.</span>
+              </div>
+            </div>
+            <section id="stage-shell" class="stage stage-unified hidden">
+              <div class="stage-body">
+                <div class="pane pane-list">
+                  <ul id="candidate-list"></ul>
+                  <div id="empty-hint" data-i18n="overlay.empty">Waiting for candidates...</div>
+                </div>
+                <div class="pane pane-preview">
+                  <pre id="preview-text" data-i18n="overlay.previewPlaceholder">No content</pre>
+                </div>
+              </div>
+              <div class="stage-footer">
+                <span class="brand">MagicPaste</span>
+                <span id="stage-hint" class="hint"></span>
+              </div>
+            </section>
+          </div>
+        </div>
+        </div>
+        <div class="guide-hints">
+          <div id="guide-hint-action" class="guide-hint-action"></div>
+          <div class="guide-keys">
+            <div class="guide-keyboard">
+              <div class="key-help help-move" data-help="move" data-i18n="guide.help.move">Move selection</div>
+              <div class="key-help help-close" data-help="close" data-i18n="guide.help.close">Close</div>
+              <div class="key-help help-confirm" data-help="confirm" data-i18n="guide.help.confirm">Paste</div>
+              <span class="key key-w" data-key="w">W</span>
+              <span class="key key-a" data-key="a">A</span>
+              <span class="key key-s" data-key="s">S</span>
+              <span class="key key-d" data-key="d">D</span>
+            </div>
+          </div>
+          <div id="guide-hint" class="guide-hint-text"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

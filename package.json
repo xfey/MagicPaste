@@ -1,0 +1,15 @@
+{
+  "name": "portal-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Workspace meta package for the Magic Paste Electron GUI.",
+  "packageManager": "pnpm@10.26.0",
+  "scripts": {
+    "daemon": "bash scripts/dev_daemon.sh",
+    "dev:gui": "pnpm --filter magic-paste-gui run start",
+    "dev": "concurrently --kill-others-on-fail --names daemon,gui --prefix-colors cyan,magenta \"pnpm run daemon\" \"pnpm run dev:gui\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

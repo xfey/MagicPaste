@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title data-i18n="page.title">Magic Paste Settings</title>
+    <link rel="stylesheet" href="./settings.css" />
+  </head>
+  <body>
+    <div class="settings-shell">
+      <div class="settings-head">
+        <h1 data-i18n="page.heading">Settings</h1>
+        <button type="button" id="close-btn" class="close-btn" aria-label="Close">×</button>
+      </div>
+      <div class="settings-card">
+        <form id="settings-form">
+          <div class="page" data-page="general">
+            <div class="section-title" data-i18n="section.general">General</div>
+            <label>
+              <span data-i18n="field.ui.locale">Language</span>
+              <select name="ui.locale">
+                <option value="en-US">English</option>
+                <option value="zh-CN">简体中文</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="field.hotkey.global">Global Hotkey</span>
+              <input type="text" name="hotkey.overlay" placeholder="CommandOrControl+Shift+V" />
+            </label>
+            <label>
+              <span data-i18n="field.ui.input">Input</span>
+              <div class="checkbox-group">
+                <label class="checkbox">
+                  <input type="checkbox" name="model.enable_image" />
+                  <span data-i18n="field.model.enable_image">Enable image input</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="context.screenshot.enabled" />
+                  <span data-i18n="field.context.screenshot">Use screen screenshot as hint</span>
+                </label>
+              </div>
+            </label>
+            <div class="action-row">
+              <button type="button" id="exit-btn" class="btn btn-ghost-danger" data-i18n="action.quit">
+                Quit
+              </button>
+            </div>
+          </div>
+
+          <div class="page hidden" data-page="model">
+            <div class="section-title" data-i18n="section.model">Model</div>
+            <label>
+              <span data-i18n="field.model.base_url">Base URL</span>
+              <input type="text" name="model.base_url" placeholder="https://api.example.com/v1" />
+            </label>
+            <label>
+              <span data-i18n="field.model.name">Model Name</span>
+              <input type="text" name="model.name" placeholder="qwen3-vl-plus" />
+            </label>
+            <label>
+              API Key
+              <input type="text" name="model.api_key" placeholder="sk-xxxxxxxx" />
+            </label>
+          </div>
+        </form>
+        <div id="settings-status" class="status-line" data-i18n="status.idle">Waiting...</div>
+        <div class="tab-bar">
+          <button type="button" class="tab active" data-target="general" data-i18n="tab.general">General</button>
+          <button type="button" class="tab" data-target="model" data-i18n="tab.model">Model</button>
+        </div>
+      </div>
+    </div>
+    <script src="./settings.js"></script>
+  </body>
+</html>

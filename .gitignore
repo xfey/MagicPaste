@@ -1,0 +1,17 @@
+.DS_Store
+*.swp
+*.swo
+*.pyc
+__pycache__/
+native/.build/
+.venv/
+.pytest_cache/
+magic_paste.egg-info/
+history/history.jsonl
+node_modules/
+gui/electron/node_modules/
+gui/electron/dist/
+gui/electron/out/
+
+build/
+runtime/

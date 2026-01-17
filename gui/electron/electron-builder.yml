@@ -1,0 +1,47 @@
+appId: com.FlintStudio.MagicPaste
+productName: MagicPaste
+artifactName: MagicPaste-${version}-${arch}.${ext}
+
+files:
+  - "**/*"
+  - "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}"
+  - "!**/node_modules/.bin"
+  - "!**/*.{map,ts}"
+  - "!**/{test,tests,__tests__}/**"
+  - "!**/*.md"
+
+asar: true
+
+beforePack: "scripts/prepare-runtime.js"
+afterSign: "scripts/sign-python-frameworks.js"
+
+extraResources:
+  - from: ../../magic_paste
+    to: magic_paste
+  - from: ../../runtime/python
+    to: python
+
+mac:
+  target:
+    - target: dmg
+  category: public.app-category.productivity
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  icon: assets/app_icon.icns
+  minimumSystemVersion: "12.0"
+  extendInfo:
+    NSAppleEventsUsageDescription: "MagicPaste needs Apple Events access to read the frontmost application for context."
+
+dmg:
+  title: MagicPaste
+  icon: assets/app_icon.icns
+  contents:
+    - x: 130
+      y: 220
+      type: file
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
