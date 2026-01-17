@@ -1,0 +1,20 @@
+{
+  "name": "magic-paste-gui",
+  "version": "1.0.0",
+  "description": "Electron shell for the Magic Paste GUI prototype.",
+  "main": "main.js",
+  "packageManager": "pnpm@10.26.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "lint": "echo \"No lint configured\"",
+    "pack": "electron-builder --mac --dir",
+    "dist": "electron-builder --mac",
+    "dist:arm64": "electron-builder --mac --arm64",
+    "dist:x64": "electron-builder --mac --x64"
+  },
+  "devDependencies": {
+    "electron": "^30.0.2",
+    "electron-builder": "^25.1.8"
+  }
+}

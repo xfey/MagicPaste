@@ -1,0 +1,22 @@
+model:
+  name: ''
+  api_key: ''        # 直接填写 API Key 或使用环境变量
+  base_url: ''       # 请填写最终聊天端点 URL（完整路径）
+  text_only: false
+  enable_image: false
+prompt:
+  base_dir: prompts
+stage1:
+  max_candidates: 3
+history:
+  path: history/history.jsonl
+context:
+  use_native_probe: true
+  probe_path: native/.build/debug/ContextProbe
+  screenshot:
+    enabled: false
+    upload_endpoint: ''  # 待实现：提供截图 URL
+hotkey:
+  overlay: CommandOrControl+Shift+V
+ui:
+  locale: zh-CN

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magic-paste"
+version = "0.1.0"
+description = "Magic Paste CLI demo for context-aware clipboard transformations."
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12.3",
+    "httpx>=0.27.0",
+    "pyperclip>=1.8.2",
+    "ruamel.yaml>=0.18.6",
+    "rich>=13.7.1",
+    "jinja2>=3.1.4",
+    "fastapi>=0.111.0",
+    "uvicorn>=0.30.0",
+    "websockets>=12.0",
+    "wsproto>=1.2.0",
+    "openai>=1.51.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.0"
+]
+
+[project.scripts]
+magic-paste = "magic_paste.main:app"
+
+[tool.setuptools.packages.find]
+include = ["magic_paste*"]
+
+[tool.typer]
+pretty_help = true

@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("JetBrains Mono"), local("Monaco"), local("Menlo");
+}
+
+:root {
+  --border-color: #0f0f0f;
+  --bg-color: #ffffff;
+  --accent: #000000;
+  --muted: #7f7f7f;
+  --panel: #f6f6f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  font-family: "JetBrainsMono", "SFMono-Regular", Menlo, Consolas, monospace;
+  color: var(--accent);
+}
+
+.guide-shell {
+  width: 100%;
+  min-height: 100vh;
+  border: 1px solid var(--border-color);
+  padding: 12px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guide-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+}
+
+p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.guide-card {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  background: var(--panel);
+  padding: 12px;
+  display: flex;
+}
+
+.guide-image {
+  flex: 1;
+  border: 1px dashed #c8c8c8;
+  background-color: #ffffff;
+  background-image: url("./assets/guide.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
